@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "DSA Reminder",
+    "version": "0.0.1",
+    "description": "A daily reminder for DSA practice.",
+    "permissions": ["storage", "webNavigation","alarms"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/"],
+        "js": ["content.js"]
+      }
+    ]
+  
+  }
+  
